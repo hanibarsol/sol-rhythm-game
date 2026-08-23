@@ -639,6 +639,32 @@
     .sol-nav-btn { transition: none; }
     .sol-nav-btn:hover { transform: none; }
 }
+  /* Four across, then three, on a phone — the same arrangement as sol-rhythm-basic.
+
+     All seven on one line left each character 44px wide, barely half the 77px its twin gives
+     them, while the panel had room to spare above and below. At that size a four-year-old is
+     looking at a thumbnail of a face, and these faces ARE the lesson: the whole method rests on
+     recognising who each note is.
+
+     Copied from sol-rhythm-basic rather than invented, so the two lessons a child meets one
+     after the other look like the same place.
+
+     Only below 640px. Above that all seven already fit comfortably on one line, and wrapping
+     there would strand a single character alone on a second row.
+
+     The rest indicator (the 🤫 circle) is centred above this row and is untouched. */
+  @media (max-width: 640px) {
+    .slots-track {
+      flex-wrap: wrap;
+      gap: 8px;
+      row-gap: 14px;
+    }
+    .slot {
+      width: calc((100% - 24px) / 4);
+      max-width: 112px;
+    }
+  }
+
 </style>
 
 <main dir="rtl" lang="he">
